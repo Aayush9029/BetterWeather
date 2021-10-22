@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C2113D0227223AB800EC7705 /* BetterWeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2113D0127223AB800EC7705 /* BetterWeatherApp.swift */; };
+		C2113D0427223AB800EC7705 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2113D0327223AB800EC7705 /* ContentView.swift */; };
+		C2113D0627223AB800EC7705 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2113D0527223AB800EC7705 /* Assets.xcassets */; };
+		C2113D0927223AB800EC7705 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2113D0827223AB800EC7705 /* Preview Assets.xcassets */; };
+		C2113D1327223AB900EC7705 /* BetterWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2113D1227223AB900EC7705 /* BetterWeatherTests.swift */; };
+		C2113D1D27223AB900EC7705 /* BetterWeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2113D1C27223AB900EC7705 /* BetterWeatherUITests.swift */; };
+		C2113D1F27223AB900EC7705 /* BetterWeatherUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2113D1E27223AB900EC7705 /* BetterWeatherUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C2113D0F27223AB900EC7705 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2113CF627223AB800EC7705 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2113CFD27223AB800EC7705;
+			remoteInfo = BetterWeather;
+		};
+		C2113D1927223AB900EC7705 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2113CF627223AB800EC7705 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2113CFD27223AB800EC7705;
+			remoteInfo = BetterWeather;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C2113CFE27223AB800EC7705 /* BetterWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2113D0127223AB800EC7705 /* BetterWeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterWeatherApp.swift; sourceTree = "<group>"; };
+		C2113D0327223AB800EC7705 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C2113D0527223AB800EC7705 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C2113D0827223AB800EC7705 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C2113D0E27223AB900EC7705 /* BetterWeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetterWeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2113D1227223AB900EC7705 /* BetterWeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterWeatherTests.swift; sourceTree = "<group>"; };
+		C2113D1827223AB900EC7705 /* BetterWeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetterWeatherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2113D1C27223AB900EC7705 /* BetterWeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterWeatherUITests.swift; sourceTree = "<group>"; };
+		C2113D1E27223AB900EC7705 /* BetterWeatherUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterWeatherUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C2113CFB27223AB800EC7705 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2113D0B27223AB900EC7705 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2113D1527223AB900EC7705 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C2113CF527223AB800EC7705 = {
+			isa = PBXGroup;
+			children = (
+				C2113D0027223AB800EC7705 /* BetterWeather */,
+				C2113D1127223AB900EC7705 /* BetterWeatherTests */,
+				C2113D1B27223AB900EC7705 /* BetterWeatherUITests */,
+				C2113CFF27223AB800EC7705 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C2113CFF27223AB800EC7705 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C2113CFE27223AB800EC7705 /* BetterWeather.app */,
+				C2113D0E27223AB900EC7705 /* BetterWeatherTests.xctest */,
+				C2113D1827223AB900EC7705 /* BetterWeatherUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C2113D0027223AB800EC7705 /* BetterWeather */ = {
+			isa = PBXGroup;
+			children = (
+				C2113D0127223AB800EC7705 /* BetterWeatherApp.swift */,
+				C2113D0327223AB800EC7705 /* ContentView.swift */,
+				C2113D0527223AB800EC7705 /* Assets.xcassets */,
+				C2113D0727223AB800EC7705 /* Preview Content */,
+			);
+			path = BetterWeather;
+			sourceTree = "<group>";
+		};
+		C2113D0727223AB800EC7705 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C2113D0827223AB800EC7705 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C2113D1127223AB900EC7705 /* BetterWeatherTests */ = {
+			isa = PBXGroup;
+			children = (
+				C2113D1227223AB900EC7705 /* BetterWeatherTests.swift */,
+			);
+			path = BetterWeatherTests;
+			sourceTree = "<group>";
+		};
+		C2113D1B27223AB900EC7705 /* BetterWeatherUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C2113D1C27223AB900EC7705 /* BetterWeatherUITests.swift */,
+				C2113D1E27223AB900EC7705 /* BetterWeatherUITestsLaunchTests.swift */,
+			);
+			path = BetterWeatherUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C2113CFD27223AB800EC7705 /* BetterWeather */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2113D2227223AB900EC7705 /* Build configuration list for PBXNativeTarget "BetterWeather" */;
+			buildPhases = (
+				C2113CFA27223AB800EC7705 /* Sources */,
+				C2113CFB27223AB800EC7705 /* Frameworks */,
+				C2113CFC27223AB800EC7705 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BetterWeather;
+			productName = BetterWeather;
+			productReference = C2113CFE27223AB800EC7705 /* BetterWeather.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C2113D0D27223AB900EC7705 /* BetterWeatherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2113D2527223AB900EC7705 /* Build configuration list for PBXNativeTarget "BetterWeatherTests" */;
+			buildPhases = (
+				C2113D0A27223AB900EC7705 /* Sources */,
+				C2113D0B27223AB900EC7705 /* Frameworks */,
+				C2113D0C27223AB900EC7705 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2113D1027223AB900EC7705 /* PBXTargetDependency */,
+			);
+			name = BetterWeatherTests;
+			productName = BetterWeatherTests;
+			productReference = C2113D0E27223AB900EC7705 /* BetterWeatherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C2113D1727223AB900EC7705 /* BetterWeatherUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2113D2827223AB900EC7705 /* Build configuration list for PBXNativeTarget "BetterWeatherUITests" */;
+			buildPhases = (
+				C2113D1427223AB900EC7705 /* Sources */,
+				C2113D1527223AB900EC7705 /* Frameworks */,
+				C2113D1627223AB900EC7705 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2113D1A27223AB900EC7705 /* PBXTargetDependency */,
+			);
+			name = BetterWeatherUITests;
+			productName = BetterWeatherUITests;
+			productReference = C2113D1827223AB900EC7705 /* BetterWeatherUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C2113CF627223AB800EC7705 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					C2113CFD27223AB800EC7705 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					C2113D0D27223AB900EC7705 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = C2113CFD27223AB800EC7705;
+					};
+					C2113D1727223AB900EC7705 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = C2113CFD27223AB800EC7705;
+					};
+				};
+			};
+			buildConfigurationList = C2113CF927223AB800EC7705 /* Build configuration list for PBXProject "BetterWeather" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C2113CF527223AB800EC7705;
+			productRefGroup = C2113CFF27223AB800EC7705 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C2113CFD27223AB800EC7705 /* BetterWeather */,
+				C2113D0D27223AB900EC7705 /* BetterWeatherTests */,
+				C2113D1727223AB900EC7705 /* BetterWeatherUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C2113CFC27223AB800EC7705 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2113D0927223AB800EC7705 /* Preview Assets.xcassets in Resources */,
+				C2113D0627223AB800EC7705 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2113D0C27223AB900EC7705 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2113D1627223AB900EC7705 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C2113CFA27223AB800EC7705 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2113D0427223AB800EC7705 /* ContentView.swift in Sources */,
+				C2113D0227223AB800EC7705 /* BetterWeatherApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2113D0A27223AB900EC7705 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2113D1327223AB900EC7705 /* BetterWeatherTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2113D1427223AB900EC7705 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2113D1D27223AB900EC7705 /* BetterWeatherUITests.swift in Sources */,
+				C2113D1F27223AB900EC7705 /* BetterWeatherUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C2113D1027223AB900EC7705 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2113CFD27223AB800EC7705 /* BetterWeather */;
+			targetProxy = C2113D0F27223AB900EC7705 /* PBXContainerItemProxy */;
+		};
+		C2113D1A27223AB900EC7705 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2113CFD27223AB800EC7705 /* BetterWeather */;
+			targetProxy = C2113D1927223AB900EC7705 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C2113D2027223AB900EC7705 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C2113D2127223AB900EC7705 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C2113D2327223AB900EC7705 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BetterWeather/Preview Content\"";
+				DEVELOPMENT_TEAM = 4538W4A79B;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aayushpokharel.opensource.BetterWeather;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C2113D2427223AB900EC7705 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BetterWeather/Preview Content\"";
+				DEVELOPMENT_TEAM = 4538W4A79B;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aayushpokharel.opensource.BetterWeather;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C2113D2627223AB900EC7705 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4538W4A79B;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aayushpokharel.opensource.BetterWeatherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BetterWeather.app/BetterWeather";
+			};
+			name = Debug;
+		};
+		C2113D2727223AB900EC7705 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4538W4A79B;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aayushpokharel.opensource.BetterWeatherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BetterWeather.app/BetterWeather";
+			};
+			name = Release;
+		};
+		C2113D2927223AB900EC7705 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4538W4A79B;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aayushpokharel.opensource.BetterWeatherUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BetterWeather;
+			};
+			name = Debug;
+		};
+		C2113D2A27223AB900EC7705 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4538W4A79B;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aayushpokharel.opensource.BetterWeatherUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BetterWeather;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C2113CF927223AB800EC7705 /* Build configuration list for PBXProject "BetterWeather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2113D2027223AB900EC7705 /* Debug */,
+				C2113D2127223AB900EC7705 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2113D2227223AB900EC7705 /* Build configuration list for PBXNativeTarget "BetterWeather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2113D2327223AB900EC7705 /* Debug */,
+				C2113D2427223AB900EC7705 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2113D2527223AB900EC7705 /* Build configuration list for PBXNativeTarget "BetterWeatherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2113D2627223AB900EC7705 /* Debug */,
+				C2113D2727223AB900EC7705 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2113D2827223AB900EC7705 /* Build configuration list for PBXNativeTarget "BetterWeatherUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2113D2927223AB900EC7705 /* Debug */,
+				C2113D2A27223AB900EC7705 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C2113CF627223AB800EC7705 /* Project object */;
+}
