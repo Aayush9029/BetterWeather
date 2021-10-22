@@ -8,31 +8,29 @@
 import SwiftUI
 
 struct HourlyForecaseDetail: View {
-    let time: String
-    var icon: String
-    var title: String
-    var description: String
-    var shadowColor: Color
-    
+    let hour: CurrentModel
+    let shadowColor = Color.white
     var body: some View{
         VStack{
-            Text(time)
+            Text(epochToHour(for: hour.dt))
                 .font(.title2.bold())
                 .font(.subheadline)
                 .foregroundColor(.primary)
                 .padding(5)
-            Image(systemName: icon)
-                .resizable()
-                .foregroundColor(shadowColor)
-                .frame(width: 50, height: 50, alignment: .center)
+            Image(systemName: weatherIconToSf(for: hour.weather.first?.icon ?? .the01d))
+                .symbolVariant(.fill)
+                .font(.largeTitle)
+                .foregroundColor(shadowColor.opacity(0.5))
+                .frame(height: 50, alignment: .center)
                 .cornerRadius(5)
-                .shadow(color: shadowColor, radius: 50)
+                .shadow(color: .black, radius: 50)
                 .padding(.bottom)
             Divider()
-            Text(title)
+            Text(String(format: "%.2f", hour.temp))
                 .font(.title3)
                 .foregroundColor(.primary)
-            Text(description)
+            
+            Text(hour.weather.first?.weatherDescription.rawValue ?? "...")
                 .font(.subheadline)
                 .foregroundColor(.secondary)
                 .lineLimit(2)
@@ -42,7 +40,7 @@ struct HourlyForecaseDetail: View {
         .background(
             RoundedRectangle(cornerRadius: 10)
                 .stroke(.linearGradient(.init(colors: [
-                    shadowColor,
+                    .teal,
                     .purple.opacity(0.5),
                     .clear,
                     .clear,
@@ -51,13 +49,12 @@ struct HourlyForecaseDetail: View {
         )
         .padding(.vertical, 5)
         .clipped()
-        .shadow(color: .black.opacity(0.15), radius: 25, x: 0, y: 25)
+        .shadow(color: .black.opacity(0.15), radius: 15, x: 0, y: 10)
         
     }
 }
 struct HourlyForecaseDetail_Previews: PreviewProvider {
     static var previews: some View {
-        HourlyForecaseDetail(time: "12PM", icon: "sun.max.fill", title: "98°", description: "Sunny ", shadowColor: .yellow)
-            .preferredColorScheme(.dark)
+        HourlyForecaseDetail(hour: exampleForecastModel.current)
     }
 }

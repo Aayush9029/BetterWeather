@@ -10,46 +10,31 @@ import SwiftUI
 
 struct MainTitleView: View {
     let city: String
-    let currentTemp: String
-    let main: String
-    let tempMin: String
-    let tempMax: String
+    let current: CurrentModel
     
     var body: some View {
         VStack{
             Text(city)
                 .font(.title).bold()
-                .foregroundStyle(.secondary)
-                .shadow(radius: 5)
-            Text("\(currentTemp)°")
-                .font(.system(size:128).bold())
-                .foregroundStyle(.primary)
-                .shadow(radius: 10)
-            
-            Text(main)
-                .font(.title).bold()
                 .foregroundStyle(.tertiary)
                 .shadow(radius: 5)
             
-            Text("H:\(tempMax)° L:\(tempMin)°")
+            Text(String(format: "%.0f°", current.temp))
+                .font(.system(size:128).bold())
+                .foregroundStyle(.primary)
+                .shadow(color: .black.opacity(0.25), radius: 10)
+            
+            Text(current.weather.first?.weatherDescription.rawValue ?? "...")
                 .font(.title).bold()
                 .foregroundStyle(.secondary)
                 .shadow(radius: 5)
-            
         }
-        .padding(.top)
     }
 }
 
 
 struct MainTitleView_Previews: PreviewProvider {
     static var previews: some View {
-        MainTitleView(
-            city: "Mississaugua",
-            currentTemp: "15",
-            main: "Rain",
-            tempMin: "15",
-            tempMax: "28"
-        )
+        MainTitleView(city: "Mississaugua", current: exampleForecastModel.current)
     }
 }

@@ -8,49 +8,47 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var forecastVM: ForecastViewModel
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false) {
-            VStack{
-                MainTitleView(
-                    city: "Mississaugua",
-                    currentTemp: "15",
-                    main: "Sunny",
-                    tempMin: "15",
-                    tempMax: "28"
-                )
+        NavigationView {
+            SideSettingsView()
+            ScrollView(.vertical, showsIndicators: false) {
+                VStack{
+                    MainTitleView(city: "Mississaugua", current: forecastVM.forecast.current)
+                    
+                    SubHeadingView(title: "24 Hour Forecast")
+                    
+                    HourlyForecastView(hourly: forecastVM.forecast.hourly)
+                    
+                    BetterDivider()
+                    
+                    SubHeadingView(title: "This Weeks Forecast")
+                    
+                    DailyForecastView(daily: forecastVM.forecast.daily)
+                    
+                    
+                    Spacer()
+                }
                 
-                BetterDivider()
-                
-                SubHeadingView(title: "Todays Hourly Forecast")
-                
-                HourlyForecastView()
-                
-                BetterDivider()
-                
-                SubHeadingView(title: "This Weeks Forecast")
-                
-                DailyForecastView()
-                
-                
-                Spacer()
             }
-            
-        }
-        
-        .background(
-            Image("clouds")
-                .resizable()
-                .scaledToFill()
-                .overlay(Color.black.opacity(0.5))
+            .background(
+                Image("clouds")
+                    .resizable()
+                    .scaledToFill()
+                    .ignoresSafeArea()
         )
+            
+//            .background(BackgroundGradient())
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(ForecastViewModel())
             .preferredColorScheme(.dark)
-.previewInterfaceOrientation(.landscapeRight)
+            .previewInterfaceOrientation(.landscapeRight)
     }
 }
 

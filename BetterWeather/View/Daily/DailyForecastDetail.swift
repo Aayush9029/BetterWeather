@@ -8,41 +8,32 @@
 import SwiftUI
 
 struct DailyForecastDetail: View {
-    let temp: Int
-    let tempMin: Int
-    let tempMax: Int
-    let pressure: Int
-    let humidity: Int
-    let dewPoint: Double
-    let windSpeed: Double
-    let main: String
-    let sunRise: Int
-    let sunSet: Int
-    let day: String
+    let day: DailyModel
     
     var body: some View{
         VStack(alignment: .leading) {
-            Text(day)
+            Text(epochToDay(for: day.dt))
                 .font(.title2.bold())
                 .foregroundStyle(.primary)
-                .padding()
+                .padding(.leading)
             Divider()
             HStack {
                 HStack{
-                    
                     Spacer()
-                    DailyForecastSubDetail(detail: "26°", image: "sun.max.fill")
-                    DailyForecastSubDetail(detail: "H:\(tempMax)° L:\(tempMin)°", image: "thermometer")
+                    DailyForecastSubDetail(detail: "\(day.temp.day)°", image: "sun.max.fill")
+
+                    DailyForecastSubDetail(detail: "\(day.temp.max)°", image: "thermometer.sun")
+                    DailyForecastSubDetail(detail: "\(day.temp.min)°", image: "thermometer.snowflake")
                     
                     DailyForecastSubDetail(
-                        detail:"\(humidity)%",
-                        image: "aqi.low"
+                        detail:"\(day.humidity)%",
+                        image: "humidity.fill"
                     )
                     DailyForecastSubDetail(
-                        detail: String(format: "%.2f", dewPoint),
+                        detail: String(format: "%.2f", day.dewPoint),
                         image: "drop.fill"
                     )
-                    DailyForecastSubDetail(detail: String(format: "%.2f km", windSpeed), image: "wind", disableDivider: true)
+                    DailyForecastSubDetail(detail: String(format: "%.2f km", day.windSpeed), image: "wind", disableDivider: true)
                     
                     Spacer()
                 }
@@ -55,19 +46,7 @@ struct DailyForecastDetail: View {
 }
 struct DailyForecastDetail_Previews: PreviewProvider {
     static var previews: some View {
-        DailyForecastDetail(
-            temp: 23,
-            tempMin: 16,
-            tempMax: 28,
-            pressure: 10002,
-            humidity: 41,
-            dewPoint: 286.19,
-            windSpeed: 3.83,
-            main: "Sunny",
-            sunRise: 1634819136,
-            sunSet: 1634859332,
-            day: "Friday"
-        )
+        DailyForecastDetail(day: exampleDailyModel)
             .preferredColorScheme(.dark)
     }
 }
@@ -81,10 +60,9 @@ struct DailyForecastSubDetail: View {
             HStack {
                 VStack(alignment: .center){
                     Image(systemName: image)
-                        .font(.largeTitle.bold())
+                        .font(.title.bold())
                         .foregroundStyle(.secondary)
-                        .padding(5)
-                    
+                        .frame(height: 50)
                     Text(detail)
                         .font(.title3)
                         .bold()
