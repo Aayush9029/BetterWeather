@@ -18,7 +18,6 @@
 		C2113D38272248F800EC7705 /* DailyForecastDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2113D37272248F800EC7705 /* DailyForecastDetail.swift */; };
 		C2A101B527231C3F00D268BF /* BackgroundGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101B427231C3F00D268BF /* BackgroundGradient.swift */; };
 		C2A101C027232C8700D268BF /* SideSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101BF27232C8700D268BF /* SideSettingsView.swift */; };
-		C2A101C327232E4E00D268BF /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = C2A101C227232E4E00D268BF /* Charts */; };
 		C2A101C727232F4200D268BF /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101C627232F4200D268BF /* ForecastModel.swift */; };
 		C2A101C927232F6600D268BF /* CurrentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101C827232F6600D268BF /* CurrentModel.swift */; };
 		C2A101CB27232F9000D268BF /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101CA27232F9000D268BF /* WeatherModel.swift */; };
@@ -55,7 +54,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2A101C327232E4E00D268BF /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,7 +182,6 @@
 			);
 			name = BetterWeather;
 			packageProductDependencies = (
-				C2A101C227232E4E00D268BF /* Charts */,
 			);
 			productName = BetterWeather;
 			productReference = C2113CFE27223AB800EC7705 /* BetterWeather.app */;
@@ -215,7 +212,6 @@
 			);
 			mainGroup = C2113CF527223AB800EC7705;
 			packageReferences = (
-				C2A101C127232E4E00D268BF /* XCRemoteSwiftPackageReference "swiftui-charts" */,
 			);
 			productRefGroup = C2113CFF27223AB800EC7705 /* Products */;
 			projectDirPath = "";
@@ -465,25 +461,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		C2A101C127232E4E00D268BF /* XCRemoteSwiftPackageReference "swiftui-charts" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/spacenation/swiftui-charts.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		C2A101C227232E4E00D268BF /* Charts */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C2A101C127232E4E00D268BF /* XCRemoteSwiftPackageReference "swiftui-charts" */;
-			productName = Charts;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C2113CF627223AB800EC7705 /* Project object */;
 }
