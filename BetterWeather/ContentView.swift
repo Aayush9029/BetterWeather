@@ -31,14 +31,14 @@ struct ContentView: View {
                 }
                 
             }
-            .background(
-                Image("clouds")
-                    .resizable()
-                    .scaledToFill()
-                    .ignoresSafeArea()
-        )
+//            .background(
+//                Image("clouds")
+//                    .resizable()
+//                    .scaledToFill()
+//                    .ignoresSafeArea()
+//        )
             
-//            .background(BackgroundGradient())
+            .background(BackgroundGradient())
         }
     }
 }

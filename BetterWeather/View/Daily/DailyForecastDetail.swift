@@ -20,7 +20,7 @@ struct DailyForecastDetail: View {
             HStack {
                 HStack{
                     Spacer()
-                    DailyForecastSubDetail(detail: "\(day.temp.day)°", image: "sun.max.fill")
+                    DailyForecastSubDetail(detail: "\(day.temp.day)°", image:  weatherIconToSf(for: day.weather.first?.icon ?? .the01d))
 
                     DailyForecastSubDetail(detail: "\(day.temp.max)°", image: "thermometer.sun")
                     DailyForecastSubDetail(detail: "\(day.temp.min)°", image: "thermometer.snowflake")
