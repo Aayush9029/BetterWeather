@@ -16,6 +16,10 @@
 		C2113D332722434000EC7705 /* MainTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2113D322722434000EC7705 /* MainTitleView.swift */; };
 		C2113D35272244A400EC7705 /* DailyForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2113D34272244A400EC7705 /* DailyForecastView.swift */; };
 		C2113D38272248F800EC7705 /* DailyForecastDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2113D37272248F800EC7705 /* DailyForecastDetail.swift */; };
+		C21AEC9A272F299C0009BBEB /* CustomAckLabelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21AEC99272F299C0009BBEB /* CustomAckLabelsView.swift */; };
+		C21AEC9C272F29C60009BBEB /* AcknowledgementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21AEC9B272F29C60009BBEB /* AcknowledgementsView.swift */; };
+		C21AEC9E272F2A2A0009BBEB /* SupportDevView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21AEC9D272F2A2A0009BBEB /* SupportDevView.swift */; };
+		C21AECA1272F2F0A0009BBEB /* LogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21AECA0272F2F0A0009BBEB /* LogView.swift */; };
 		C2A101B527231C3F00D268BF /* BackgroundGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101B427231C3F00D268BF /* BackgroundGradient.swift */; };
 		C2A101C027232C8700D268BF /* SideSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101BF27232C8700D268BF /* SideSettingsView.swift */; };
 		C2A101C727232F4200D268BF /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101C627232F4200D268BF /* ForecastModel.swift */; };
@@ -24,7 +28,8 @@
 		C2A101CD27232FB600D268BF /* MinutelyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101CC27232FB600D268BF /* MinutelyModel.swift */; };
 		C2A101CF27232FCD00D268BF /* DailyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101CE27232FCD00D268BF /* DailyModel.swift */; };
 		C2A101D52723329D00D268BF /* ForecastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101D42723329D00D268BF /* ForecastViewModel.swift */; };
-		C2A101D72723460F00D268BF /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101D62723460F00D268BF /* Date+Extensions.swift */; };
+		C2A101D72723460F00D268BF /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101D62723460F00D268BF /* Date+Extension.swift */; };
+		C2D4BA4E272F1D8F00FF6C6A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D4BA4D272F1D8F00FF6C6A /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +43,11 @@
 		C2113D322722434000EC7705 /* MainTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTitleView.swift; sourceTree = "<group>"; };
 		C2113D34272244A400EC7705 /* DailyForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecastView.swift; sourceTree = "<group>"; };
 		C2113D37272248F800EC7705 /* DailyForecastDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecastDetail.swift; sourceTree = "<group>"; };
+		C21AEC99272F299C0009BBEB /* CustomAckLabelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAckLabelsView.swift; sourceTree = "<group>"; };
+		C21AEC9B272F29C60009BBEB /* AcknowledgementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementsView.swift; sourceTree = "<group>"; };
+		C21AEC9D272F2A2A0009BBEB /* SupportDevView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportDevView.swift; sourceTree = "<group>"; };
+		C21AECA0272F2F0A0009BBEB /* LogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogView.swift; sourceTree = "<group>"; };
+		C21AECA2272F33650009BBEB /* BetterWeather.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BetterWeather.entitlements; sourceTree = "<group>"; };
 		C2A101B427231C3F00D268BF /* BackgroundGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundGradient.swift; sourceTree = "<group>"; };
 		C2A101BF27232C8700D268BF /* SideSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideSettingsView.swift; sourceTree = "<group>"; };
 		C2A101C627232F4200D268BF /* ForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModel.swift; sourceTree = "<group>"; };
@@ -46,7 +56,8 @@
 		C2A101CC27232FB600D268BF /* MinutelyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinutelyModel.swift; sourceTree = "<group>"; };
 		C2A101CE27232FCD00D268BF /* DailyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyModel.swift; sourceTree = "<group>"; };
 		C2A101D42723329D00D268BF /* ForecastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewModel.swift; sourceTree = "<group>"; };
-		C2A101D62723460F00D268BF /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		C2A101D62723460F00D268BF /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		C2D4BA4D272F1D8F00FF6C6A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +90,14 @@
 		C2113D0027223AB800EC7705 /* BetterWeather */ = {
 			isa = PBXGroup;
 			children = (
+				C21AECA2272F33650009BBEB /* BetterWeather.entitlements */,
 				C2113D0127223AB800EC7705 /* BetterWeatherApp.swift */,
 				C2113D0327223AB800EC7705 /* ContentView.swift */,
-				C2A101D32723328C00D268BF /* ViewModel */,
-				C2A101C527232F3500D268BF /* Model */,
 				C2113D2B27223AD100EC7705 /* View */,
+				C2A101C527232F3500D268BF /* Model */,
+				C2A101D32723328C00D268BF /* ViewModel */,
+				C2D4BA4F272F22C900FF6C6A /* Extensions */,
 				C2113D0527223AB800EC7705 /* Assets.xcassets */,
-				C2A101D62723460F00D268BF /* Date+Extensions.swift */,
 				C2113D0727223AB800EC7705 /* Preview Content */,
 			);
 			path = BetterWeather;
@@ -107,7 +119,7 @@
 				C2A101C427232E6A00D268BF /* MinutelyForecast */,
 				C2113D36272248EA00EC7705 /* Daily */,
 				C2113D2D27223B2600EC7705 /* Hourly */,
-				C2A101B427231C3F00D268BF /* BackgroundGradient.swift */,
+				C2D4BA50272F233000FF6C6A /* Shared */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -130,10 +142,22 @@
 			path = Daily;
 			sourceTree = "<group>";
 		};
+		C21AEC9F272F2A410009BBEB /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				C21AEC99272F299C0009BBEB /* CustomAckLabelsView.swift */,
+				C21AEC9B272F29C60009BBEB /* AcknowledgementsView.swift */,
+				C21AEC9D272F2A2A0009BBEB /* SupportDevView.swift */,
+				C21AECA0272F2F0A0009BBEB /* LogView.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
 		C2A101BE27232C6500D268BF /* SideSettings */ = {
 			isa = PBXGroup;
 			children = (
 				C2A101BF27232C8700D268BF /* SideSettingsView.swift */,
+				C21AEC9F272F2A410009BBEB /* SubViews */,
 			);
 			path = SideSettings;
 			sourceTree = "<group>";
@@ -160,9 +184,26 @@
 		C2A101D32723328C00D268BF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C2D4BA4D272F1D8F00FF6C6A /* Constants.swift */,
 				C2A101D42723329D00D268BF /* ForecastViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C2D4BA4F272F22C900FF6C6A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C2A101D62723460F00D268BF /* Date+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C2D4BA50272F233000FF6C6A /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C2A101B427231C3F00D268BF /* BackgroundGradient.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +281,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2A101C027232C8700D268BF /* SideSettingsView.swift in Sources */,
+				C2D4BA4E272F1D8F00FF6C6A /* Constants.swift in Sources */,
+				C21AEC9A272F299C0009BBEB /* CustomAckLabelsView.swift in Sources */,
 				C2113D3127223D7B00EC7705 /* HourlyForecastView.swift in Sources */,
 				C2A101B527231C3F00D268BF /* BackgroundGradient.swift in Sources */,
 				C2113D38272248F800EC7705 /* DailyForecastDetail.swift in Sources */,
@@ -247,11 +290,14 @@
 				C2A101D52723329D00D268BF /* ForecastViewModel.swift in Sources */,
 				C2113D332722434000EC7705 /* MainTitleView.swift in Sources */,
 				C2A101C927232F6600D268BF /* CurrentModel.swift in Sources */,
+				C21AEC9E272F2A2A0009BBEB /* SupportDevView.swift in Sources */,
 				C2113D2F27223B3300EC7705 /* HourlyForecaseDetail.swift in Sources */,
-				C2A101D72723460F00D268BF /* Date+Extensions.swift in Sources */,
+				C2A101D72723460F00D268BF /* Date+Extension.swift in Sources */,
+				C21AECA1272F2F0A0009BBEB /* LogView.swift in Sources */,
 				C2113D35272244A400EC7705 /* DailyForecastView.swift in Sources */,
 				C2113D0427223AB800EC7705 /* ContentView.swift in Sources */,
 				C2A101CD27232FB600D268BF /* MinutelyModel.swift in Sources */,
+				C21AEC9C272F29C60009BBEB /* AcknowledgementsView.swift in Sources */,
 				C2A101CF27232FCD00D268BF /* DailyModel.swift in Sources */,
 				C2A101CB27232F9000D268BF /* WeatherModel.swift in Sources */,
 				C2113D0227223AB800EC7705 /* BetterWeatherApp.swift in Sources */,
@@ -382,6 +428,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BetterWeather/BetterWeather.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BetterWeather/Preview Content\"";
@@ -402,6 +449,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aayushpokharel.opensource.BetterWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -413,6 +461,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BetterWeather/BetterWeather.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BetterWeather/Preview Content\"";
@@ -433,6 +482,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aayushpokharel.opensource.BetterWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

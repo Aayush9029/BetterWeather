@@ -48,7 +48,7 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
             .environmentObject(ForecastViewModel())
             .preferredColorScheme(.dark)
-            .previewInterfaceOrientation(.landscapeRight)
+            .previewInterfaceOrientation(.portraitUpsideDown)
     }
 }
 
