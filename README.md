@@ -38,4 +38,3 @@ Wanna build the app yourself?
 >
 
 
-Made with ❤️ in 🇨🇦
