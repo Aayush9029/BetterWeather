@@ -11,7 +11,7 @@ import Foundation
 struct WeatherModel: Codable, Hashable {
     let id: Int
     let main: Main
-    let weatherDescription: Description?
+    let weatherDescription: String?
     let icon: Icon?
     
     enum CodingKeys: String, CodingKey {
@@ -52,27 +52,11 @@ enum Main: String, Codable {
     case thunderstorm = "Thunderstorm"
 }
 
-enum Description: String, Codable {
-    case brokenClouds = "broken clouds"
-    case clearSky = "clear sky"
-    case fewClouds = "few clouds"
-    case lightRain = "light rain"
-    case moderateRain = "moderate rain"
-    case overcastClouds = "overcast clouds"
-    case scatteredClouds = "scattered clouds"
-    case mist = "mist"
-    case showerRain = "shower rain"
-    case rain = "rain"
-    case thunderstorm = "thunderstorm"
-    case snow = "snow"
-    
-}
-
 
 let exampleWeatherModel = WeatherModel(
     id: 0,
     main: .clear ,
-    weatherDescription: .showerRain,
+    weatherDescription: "rainy",
     icon: .the01d
 )
 

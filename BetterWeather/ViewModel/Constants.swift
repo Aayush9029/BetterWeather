@@ -9,7 +9,7 @@ import Foundation
 
 
 struct Constants{
-    static let apiKey = "bc491408821cc43317006173fd1c5bef"
+    static let apiKey = "YOUR_API_KEY"
     static let initialUrl = " https://api.openweathermap.org/data/2.5/onecall?"
 }
 

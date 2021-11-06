@@ -24,7 +24,7 @@ struct MainTitleView: View {
                 .foregroundStyle(.primary)
                 .shadow(color: .black.opacity(0.25), radius: 10)
             
-            Text(current.weather.first?.weatherDescription?.rawValue ?? "...")
+            Text(current.weather.first?.weatherDescription ?? "...")
                 .font(.title).bold()
                 .foregroundStyle(.secondary)
                 .shadow(radius: 5)

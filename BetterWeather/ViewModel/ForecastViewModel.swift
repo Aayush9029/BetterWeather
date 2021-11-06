@@ -55,7 +55,9 @@ class ForecastViewModel: ObservableObject{
          let (data, response) = try await URLSession.shared.data(from: url)
          */
 
-        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/onecall?lat=\(storedLong)&lon=\(storedLong)&appid=\(Constants.apiKey)&units=\(storedUnits)&units=metric") else {return}
+        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/onecall?lat=\(storedLat)&lon=\(storedLong)&appid=\(Constants.apiKey)&units=\(storedUnits)&units=metric") else {return}
+//        let url = URL(string: "http://192.168.2.23:8000/test.json")!
+        
         print(url)
         URLSession.shared.dataTask(with: url) { data, response, error in
             
