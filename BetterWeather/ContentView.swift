@@ -9,9 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var forecastVM: ForecastViewModel
+    @EnvironmentObject var locationVM: LocationViewModel
+
     var body: some View {
         NavigationView {
             SideSettingsView()
+                .environmentObject(locationVM)
             ScrollView(.vertical, showsIndicators: false) {
                 VStack{
                     MainTitleView(city: "Mississaugua", current: forecastVM.forecast.current)

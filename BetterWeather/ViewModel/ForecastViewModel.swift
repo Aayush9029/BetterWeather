@@ -77,6 +77,7 @@ class ForecastViewModel: ObservableObject{
                         self.currentStatus = .decodingJson
                         self.forecast = try JSONDecoder().decode(ForecastModel.self, from: data)
                         self.currentStatus = .decodingSuccess
+                        self.storedCity = self.forecast.timezone
                     }   catch{
                         self.currentStatus = .decodingFailed
                         print(error.localizedDescription)

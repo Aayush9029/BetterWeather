@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import CoreLocation
+import CoreLocationUI
 
 struct SideSettingsView: View {
+    @EnvironmentObject var locationViewModel: LocationViewModel
     @State var isMilk: Bool = false
     var body: some View {
         VStack {
@@ -16,10 +19,15 @@ struct SideSettingsView: View {
                     Section(
                         header: CustomAckLabels(title: "Quick Settings", image: "gear", color: .gray)
                     ){
-                        Button {
-                        } label: {
-                            Label("Update Location", systemImage: "location")
-                        }
+                        
+                        LocationButton(.currentLocation) {
+                            locationViewModel.requestLocation()
+                        }.foregroundColor(.white)
+                            .symbolVariant(.fill)
+                            .cornerRadius(10)
+                            .shadow(color: .blue.opacity(0.5), radius: 5, x: 0, y: 2)
+                            .padding()
+                        
                         Button {
                         } label: {
                             Label("Refresh Weather Data", systemImage: "arrow.clockwise.circle")
@@ -27,17 +35,17 @@ struct SideSettingsView: View {
                     }.symbolVariant(.fill)
                     
                     
-                    Section(
-                        header:  CustomAckLabels(title: "Background Style", image: "photo.fill", color: .purple)
-                    ){
-                        Toggle("Animated Milk", isOn: $isMilk )
-                        Toggle("Pure Black", isOn: $isMilk )
-                        Toggle("Clouds image", isOn: $isMilk )
-                        Toggle("Abstract", isOn: $isMilk )
-                        Toggle("Video", isOn: $isMilk )
-                    }
-                    .tint(.orange)
-                    
+//                    Section(
+//                        header:  CustomAckLabels(title: "Background Style", image: "photo.fill", color: .purple)
+//                    ){
+//                        Toggle("Animated Milk", isOn: $isMilk )
+//                        Toggle("Pure Black", isOn: $isMilk )
+//                        Toggle("Clouds image", isOn: $isMilk )
+//                        Toggle("Abstract", isOn: $isMilk )
+//                        Toggle("Video", isOn: $isMilk )
+//                    }
+//                    .tint(.orange)
+//
 
                     AcknowledgementsView()
 

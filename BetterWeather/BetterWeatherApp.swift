@@ -10,9 +10,12 @@ import SwiftUI
 @main
 struct BetterWeatherApp: App {
     @StateObject var forecaseViewModel = ForecastViewModel()
+    @StateObject var locationViewModel = LocationViewModel()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(locationViewModel)
                 .environmentObject(forecaseViewModel)
                 .statusBar(hidden: true)
         }

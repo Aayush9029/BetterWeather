@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct AcknowledgementsView: View {
+    @Environment(\.openURL) var openUrl
+
     var body: some View {
         Section(
             header: CustomAckLabels(title: "Acknowledgement", image: "sparkles", color: .yellow)
         ) {
             Button {
+                openUrl(URL(string: "https://openweathermap.org/")!)
+
             } label: {
                 HStack{
                     Image("github-logo")
@@ -23,7 +27,8 @@ struct AcknowledgementsView: View {
                 }
             }
             Button {
-                
+                openUrl(URL(string: "https://openweathermap.org/")!)
+
             } label: {
                 CustomAckLabels(title: "Weather data", image: "cloud", color: .orange)
             }

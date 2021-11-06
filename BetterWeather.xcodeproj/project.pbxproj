@@ -30,6 +30,8 @@
 		C2A101D52723329D00D268BF /* ForecastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101D42723329D00D268BF /* ForecastViewModel.swift */; };
 		C2A101D72723460F00D268BF /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101D62723460F00D268BF /* Date+Extension.swift */; };
 		C2D4BA4E272F1D8F00FF6C6A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D4BA4D272F1D8F00FF6C6A /* Constants.swift */; };
+		C2E054E52737268000CD50F4 /* MeshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E054E42737268000CD50F4 /* MeshView.swift */; };
+		C2E054E72737277200CD50F4 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E054E62737277200CD50F4 /* LocationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		C2A101D42723329D00D268BF /* ForecastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewModel.swift; sourceTree = "<group>"; };
 		C2A101D62723460F00D268BF /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		C2D4BA4D272F1D8F00FF6C6A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C2E054E42737268000CD50F4 /* MeshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeshView.swift; sourceTree = "<group>"; };
+		C2E054E62737277200CD50F4 /* LocationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,7 @@
 				C2113D36272248EA00EC7705 /* Daily */,
 				C2113D2D27223B2600EC7705 /* Hourly */,
 				C2D4BA50272F233000FF6C6A /* Shared */,
+				C2E054E42737268000CD50F4 /* MeshView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -184,6 +189,7 @@
 		C2A101D32723328C00D268BF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C2E054E62737277200CD50F4 /* LocationViewModel.swift */,
 				C2D4BA4D272F1D8F00FF6C6A /* Constants.swift */,
 				C2A101D42723329D00D268BF /* ForecastViewModel.swift */,
 			);
@@ -291,11 +297,13 @@
 				C2113D332722434000EC7705 /* MainTitleView.swift in Sources */,
 				C2A101C927232F6600D268BF /* CurrentModel.swift in Sources */,
 				C21AEC9E272F2A2A0009BBEB /* SupportDevView.swift in Sources */,
+				C2E054E52737268000CD50F4 /* MeshView.swift in Sources */,
 				C2113D2F27223B3300EC7705 /* HourlyForecaseDetail.swift in Sources */,
 				C2A101D72723460F00D268BF /* Date+Extension.swift in Sources */,
 				C21AECA1272F2F0A0009BBEB /* LogView.swift in Sources */,
 				C2113D35272244A400EC7705 /* DailyForecastView.swift in Sources */,
 				C2113D0427223AB800EC7705 /* ContentView.swift in Sources */,
+				C2E054E72737277200CD50F4 /* LocationViewModel.swift in Sources */,
 				C2A101CD27232FB600D268BF /* MinutelyModel.swift in Sources */,
 				C21AEC9C272F29C60009BBEB /* AcknowledgementsView.swift in Sources */,
 				C2A101CF27232FCD00D268BF /* DailyModel.swift in Sources */,
