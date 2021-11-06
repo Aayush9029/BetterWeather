@@ -17,7 +17,7 @@ struct ContentView: View {
                 .environmentObject(locationVM)
             ScrollView(.vertical, showsIndicators: false) {
                 VStack{
-                    MainTitleView(city: "Mississaugua", current: forecastVM.forecast.current)
+                    MainTitleView(current: forecastVM.forecast.current)
                     
                     SubHeadingView(title: "24 Hour Forecast")
                     
@@ -26,7 +26,6 @@ struct ContentView: View {
                     BetterDivider()
                     
                     SubHeadingView(title: "This Weeks Forecast")
-                    
                     DailyForecastView(daily: forecastVM.forecast.daily)
                     
                     

@@ -7,10 +7,12 @@
 
 import SwiftUI
 import CoreLocation
+import MapKit
 
 class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate{
-    @AppStorage(AppStorageKeys.storedLong.rawValue) var long = "";
-    @AppStorage(AppStorageKeys.storedLong.rawValue) var lat = "";
+    @AppStorage(AppStorageKeys.storedLong.rawValue) var lon = "";
+    @AppStorage(AppStorageKeys.storedLat.rawValue) var lat = "";
+    @AppStorage(AppStorageKeys.storedCity.rawValue) var storedCity = "";
 
     // MARK: - Location Data Model
     let manager = CLLocationManager()
@@ -23,6 +25,11 @@ class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate{
     
     func requestLocation() {
         manager.requestLocation()
+        printDebugString()
+        
+        manager.location?.fetchCityAndCountry(completion: { city, country, error in
+            self.storedCity = city ?? "Unknown City"
+        })
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error){
@@ -33,8 +40,11 @@ class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         if let location = locations.first?.coordinate {
-            long = "\(location.longitude)"
+            lon = "\(location.longitude)"
             lat = "\(location.latitude)"
+            
+            printDebugString()
+            
         }else{
             return
         }
@@ -44,8 +54,13 @@ class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate{
     
  
     private func printDebugString(){
-        print("Latitude: \(long)\nLongitude: \(long)")
+        print("Latitude: \(lat)\nLongitude: \(lon)")
     }
 }
 
     
+extension CLLocation {
+    func fetchCityAndCountry(completion: @escaping (_ city: String?, _ country:  String?, _ error: Error?) -> ()) {
+        CLGeocoder().reverseGeocodeLocation(self) { completion($0?.first?.locality, $0?.first?.country, $1) }
+    }
+}

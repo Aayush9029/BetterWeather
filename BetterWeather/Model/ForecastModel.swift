@@ -13,14 +13,16 @@ struct ForecastModel: Codable {
     let timezone: String
     let timezoneOffset: Int
     let current: CurrentModel
-    let minutely: [MinutelyModel]
+    let minutely: [MinutelyModel]?
     let hourly: [CurrentModel]
     let daily: [DailyModel]
+    let alerts: [WeatherAlertModel]?
 
     enum CodingKeys: String, CodingKey {
         case lat, lon, timezone
         case timezoneOffset = "timezone_offset"
-        case current, minutely, hourly, daily
+        case current, minutely, hourly, daily, alerts
+        
     }
 }
 
@@ -50,4 +52,19 @@ let exampleForecastModel =  ForecastModel(
             rain: Rain(the1H: 0.1), snow: 0.0),
     minutely: [MinutelyModel](),
     hourly: [CurrentModel](),
-    daily: [DailyModel]())
+    daily: [DailyModel](), alerts: [WeatherAlertModel]())
+
+// MARK: - WeatherAlertModel
+struct WeatherAlertModel: Codable {
+    let senderName, event: String
+    let start, end: Int
+    let alertDescription: String
+    let tags: [String]
+
+    enum CodingKeys: String, CodingKey {
+        case senderName = "sender_name"
+        case event, start, end
+        case alertDescription = "description"
+        case tags
+    }
+}

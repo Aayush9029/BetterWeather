@@ -8,7 +8,6 @@
 import SwiftUI
 
 class ForecastViewModel: ObservableObject{
-    @AppStorage(AppStorageKeys.storedCity.rawValue) var storedCity = "Unknown"
     @AppStorage(AppStorageKeys.storedLat.rawValue) var storedLat = "0"
     @AppStorage(AppStorageKeys.storedLong.rawValue) var storedLong = "0"
     @AppStorage(AppStorageKeys.storedUnits.rawValue) var storedUnits = "metric"
@@ -41,7 +40,7 @@ class ForecastViewModel: ObservableObject{
                 rain: Rain(the1H: 0.1), snow: 0.0),
         minutely: [MinutelyModel](),
         hourly: [CurrentModel](),
-        daily: [exampleDailyModel]
+        daily: [exampleDailyModel], alerts: [WeatherAlertModel]()
     )
     
     init(){
@@ -56,7 +55,8 @@ class ForecastViewModel: ObservableObject{
          let (data, response) = try await URLSession.shared.data(from: url)
          */
 
-        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/onecall?lat=\(storedLat)&lon=\(storedLong)&appid=\(Constants.apiKey)&units=\(storedUnits)") else {return}
+        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/onecall?lat=\(storedLong)&lon=\(storedLong)&appid=\(Constants.apiKey)&units=\(storedUnits)&units=metric") else {return}
+        print(url)
         URLSession.shared.dataTask(with: url) { data, response, error in
             
             guard (response as? HTTPURLResponse)?.statusCode == 200 else {
@@ -77,8 +77,19 @@ class ForecastViewModel: ObservableObject{
                         self.currentStatus = .decodingJson
                         self.forecast = try JSONDecoder().decode(ForecastModel.self, from: data)
                         self.currentStatus = .decodingSuccess
-                        self.storedCity = self.forecast.timezone
-                    }   catch{
+                    } catch let DecodingError.dataCorrupted(context) {
+                        print(context)
+                    } catch let DecodingError.keyNotFound(key, context) {
+                        print("Key '\(key)' not found:", context.debugDescription)
+                        print("codingPath:", context.codingPath)
+                    } catch let DecodingError.valueNotFound(value, context) {
+                        print("Value '\(value)' not found:", context.debugDescription)
+                        print("codingPath:", context.codingPath)
+                    } catch let DecodingError.typeMismatch(type, context)  {
+                        print("Type '\(type)' mismatch:", context.debugDescription)
+                        print("codingPath:", context.codingPath)
+                    }
+                    catch{
                         self.currentStatus = .decodingFailed
                         print(error.localizedDescription)
                     }

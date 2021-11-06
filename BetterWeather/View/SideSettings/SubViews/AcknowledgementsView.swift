@@ -15,14 +15,12 @@ struct AcknowledgementsView: View {
             header: CustomAckLabels(title: "Acknowledgement", image: "sparkles", color: .yellow)
         ) {
             Button {
-                openUrl(URL(string: "https://openweathermap.org/")!)
-
+                openUrl(URL(string: "https://github.com/Aayush9029/BetterWeather")!)
             } label: {
                 HStack{
                     Image("github-logo")
                         .resizable()
                         .frame(width: 25, height: 25, alignment: .center)
-                    
                     Text("App source code")
                 }
             }
@@ -32,7 +30,6 @@ struct AcknowledgementsView: View {
             } label: {
                 CustomAckLabels(title: "Weather data", image: "cloud", color: .orange)
             }
-            
         }
     }
 }

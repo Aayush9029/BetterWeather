@@ -30,7 +30,7 @@ struct HourlyForecaseDetail: View {
                 .font(.title3)
                 .foregroundColor(.primary)
             
-            Text(hour.weather.first?.weatherDescription.rawValue ?? "...")
+            Text(hour.weather.first?.weatherDescription?.rawValue ?? "...")
                 .font(.subheadline)
                 .foregroundColor(.secondary)
                 .lineLimit(2)

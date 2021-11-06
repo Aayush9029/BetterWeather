@@ -9,12 +9,12 @@ import SwiftUI
 
 
 struct MainTitleView: View {
-    let city: String
+    @AppStorage(AppStorageKeys.storedCity.rawValue) var storedCity = "";
     let current: CurrentModel
     
     var body: some View {
         VStack{
-            Text(city)
+            Text(storedCity)
                 .font(.title).bold()
                 .foregroundStyle(.tertiary)
                 .shadow(radius: 5)
@@ -24,7 +24,7 @@ struct MainTitleView: View {
                 .foregroundStyle(.primary)
                 .shadow(color: .black.opacity(0.25), radius: 10)
             
-            Text(current.weather.first?.weatherDescription.rawValue ?? "...")
+            Text(current.weather.first?.weatherDescription?.rawValue ?? "...")
                 .font(.title).bold()
                 .foregroundStyle(.secondary)
                 .shadow(radius: 5)
@@ -35,6 +35,6 @@ struct MainTitleView: View {
 
 struct MainTitleView_Previews: PreviewProvider {
     static var previews: some View {
-        MainTitleView(city: "Mississaugua", current: exampleForecastModel.current)
+        MainTitleView(current: exampleForecastModel.current)
     }
 }

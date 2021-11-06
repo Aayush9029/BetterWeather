@@ -124,7 +124,6 @@
 				C2113D36272248EA00EC7705 /* Daily */,
 				C2113D2D27223B2600EC7705 /* Hourly */,
 				C2D4BA50272F233000FF6C6A /* Shared */,
-				C2E054E42737268000CD50F4 /* MeshView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -190,8 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				C2E054E62737277200CD50F4 /* LocationViewModel.swift */,
-				C2D4BA4D272F1D8F00FF6C6A /* Constants.swift */,
 				C2A101D42723329D00D268BF /* ForecastViewModel.swift */,
+				C2D4BA4D272F1D8F00FF6C6A /* Constants.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -207,6 +206,7 @@
 		C2D4BA50272F233000FF6C6A /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				C2E054E42737268000CD50F4 /* MeshView.swift */,
 				C2A101B427231C3F00D268BF /* BackgroundGradient.swift */,
 			);
 			path = Shared;

@@ -10,7 +10,9 @@ import CoreLocation
 import CoreLocationUI
 
 struct SideSettingsView: View {
+    @EnvironmentObject var forecaseViewModel: ForecastViewModel
     @EnvironmentObject var locationViewModel: LocationViewModel
+    
     @State var isMilk: Bool = false
     var body: some View {
         VStack {
@@ -29,12 +31,14 @@ struct SideSettingsView: View {
                             .padding()
                         
                         Button {
+                            forecaseViewModel.fetchForecast()
                         } label: {
                             Label("Refresh Weather Data", systemImage: "arrow.clockwise.circle")
                         }
                     }.symbolVariant(.fill)
                     
-                    
+//            MARK: - To Do
+
 //                    Section(
 //                        header:  CustomAckLabels(title: "Background Style", image: "photo.fill", color: .purple)
 //                    ){
@@ -51,7 +55,9 @@ struct SideSettingsView: View {
 
                     SupportDevView()
 
-                    LogView()
+                    
+//            MARK: - To Do
+//                    LogView()
                 }
                 Text("Made with ❤️ in 🇨🇦")
                     .bold()

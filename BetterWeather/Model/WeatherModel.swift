@@ -11,7 +11,7 @@ import Foundation
 struct WeatherModel: Codable, Hashable {
     let id: Int
     let main: Main
-    let weatherDescription: Description
+    let weatherDescription: Description?
     let icon: Icon?
     
     enum CodingKeys: String, CodingKey {
@@ -47,9 +47,9 @@ enum Main: String, Codable {
     case clouds = "Clouds"
     case rain = "Rain"
     case snow = "Snow"
-    case mist = "mist"
-    case showerRain = "shower rain"
-    case thunderstorm = "thunderstorm"
+    case mist = "Mist"
+    case showerRain = "Shower rain"
+    case thunderstorm = "Thunderstorm"
 }
 
 enum Description: String, Codable {
@@ -117,53 +117,3 @@ func weatherIconToSf(for icon: Icon) -> String{
         return "wind.snow"
     }
 }
-
-
-//
-//
-//case the01d = "01d"
-//case the01n = "01n"
-//case the02d = "02d"
-//case the02n = "02n"
-//case the03d = "03d"
-//case the03n = "03n"
-//case the04d = "04d"
-//case the04n = "04n"
-//case the09d = "09d"
-//case the09n = "09n"
-//case the10d = "10d"
-//case the10n = "10n"
-//case the11d = "11d"
-//case the11n = "11n"
-//case the13d = "13d"
-//case the13n = "13n"
-//case the50d = "50d"
-//case the50n = "50n"
-
-
-
-
-
-
-
-//sun.min.fill"
-//moon.fill"
-//cloud.sun.fill"
-//cloud.sun"
-//cloud.fill"
-//cloud"
-//smoke.fill"
-//smoke"
-//cloud.drizzle.fill"
-//cloud.drizzle"
-//cloud.rain.fill"
-//cloud.rain"
-//cloud.bolt.rain.fill"
-//cloud.bolt.rain"
-//cloud.snow.fill"
-//cloud.snow"
-//wind"
-//wind.snow"
-
-
-

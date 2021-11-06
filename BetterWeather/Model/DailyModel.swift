@@ -22,8 +22,7 @@ struct DailyModel: Codable, Hashable {
     let weather: [WeatherModel]
     let clouds: Int
     let pop, uvi: Double
-    let rain: Double?
-    let snow: Double?
+    let rain, snow: Double?
     
     enum CodingKeys: String, CodingKey {
         case dt, sunrise, sunset, moonrise, moonset
