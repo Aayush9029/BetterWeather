@@ -5,6 +5,11 @@
 <img src="https://github.com/Aayush9029/BetterWeather/raw/main/ReadmeAssets/image3.PNG">
 <img src="https://github.com/Aayush9029/BetterWeather/raw/main/ReadmeAssets/image1.PNG">
 
+Here are some icons: You are free to use this on your own project. *no need to credit me*
+
+<img src="https://user-images.githubusercontent.com/43297314/140627276-b9dff5c6-a619-47b1-a4e9-541a92a56251.jpg" width='200px'> <img src="https://user-images.githubusercontent.com/43297314/140627277-73b70eaa-033a-4f72-bc88-f0aad8938976.jpg" width='200px'> <img src="https://user-images.githubusercontent.com/43297314/140627278-05881cda-0172-4154-9a98-a13ac1f56932.jpg" width='200px'>
+
+
 ---
 
 ### Usage
