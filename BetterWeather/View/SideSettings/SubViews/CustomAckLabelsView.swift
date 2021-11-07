@@ -13,10 +13,12 @@ struct CustomAckLabels: View {
     let color: Color
     var body: some View {
         HStack{
-            Image(systemName: image)
-                .symbolVariant(.fill)
-                .foregroundColor(color)
             Text(title)
+//            Label(title, systemImage: image)
+//            Image(systemName: image)
+//                .symbolVariant(.fill)
+//                .foregroundColor(color)
+//            Text(title)
         }
     }
 }

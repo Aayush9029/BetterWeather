@@ -11,7 +11,8 @@ class ForecastViewModel: ObservableObject{
     @AppStorage(AppStorageKeys.storedLat.rawValue) var storedLat = "0"
     @AppStorage(AppStorageKeys.storedLong.rawValue) var storedLong = "0"
     @AppStorage(AppStorageKeys.storedUnits.rawValue) var storedUnits = "metric"
-    
+    @AppStorage(AppStorageKeys.storedAPIKey.rawValue) var apiKey = ""
+
     @State var currentStatus: CurrentStatus = .none
     
     @Published var forecast: ForecastModel = ForecastModel(
@@ -55,7 +56,7 @@ class ForecastViewModel: ObservableObject{
          let (data, response) = try await URLSession.shared.data(from: url)
          */
 
-        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/onecall?lat=\(storedLat)&lon=\(storedLong)&appid=\(Constants.apiKey)&units=\(storedUnits)&units=metric") else {return}
+        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/onecall?lat=\(storedLat)&lon=\(storedLong)&appid=\(apiKey)&units=\(storedUnits)&units=metric") else {return}
 //        let url = URL(string: "http://192.168.2.23:8000/test.json")!
         
         print(url)

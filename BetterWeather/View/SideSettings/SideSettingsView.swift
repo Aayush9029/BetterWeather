@@ -50,10 +50,11 @@ struct SideSettingsView: View {
 //                    }
 //                    .tint(.orange)
 //
-
                     AcknowledgementsView()
 
                     SupportDevView()
+                    Divider()
+                    ApiKeyAddView()
 
                     
 //            MARK: - To Do
@@ -62,6 +63,7 @@ struct SideSettingsView: View {
                 Text("Made with ❤️ in 🇨🇦")
                     .bold()
                     .foregroundStyle(.secondary)
+                    .padding(.bottom)
             }
         .navigationTitle("Better Weather")
         }
