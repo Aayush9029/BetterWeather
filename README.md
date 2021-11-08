@@ -1,14 +1,9 @@
 # BetterWeather
-*The missing Weather App for iPad and MacOS.*
+The missing Weather App for your Mac.
 
-<img src="https://github.com/Aayush9029/BetterWeather/raw/main/ReadmeAssets/image2.PNG">
-<img src="https://github.com/Aayush9029/BetterWeather/raw/main/ReadmeAssets/image3.PNG">
-<img src="https://github.com/Aayush9029/BetterWeather/raw/main/ReadmeAssets/image1.PNG">
-
-Here are some icons: You are free to use this on your own project. *no need to credit me*
-
-<img src="https://user-images.githubusercontent.com/43297314/140627276-b9dff5c6-a619-47b1-a4e9-541a92a56251.jpg" width='200px'> <img src="https://user-images.githubusercontent.com/43297314/140627277-73b70eaa-033a-4f72-bc88-f0aad8938976.jpg" width='200px'> <img src="https://user-images.githubusercontent.com/43297314/140627278-05881cda-0172-4154-9a98-a13ac1f56932.jpg" width='200px'>
-
+![Screen Shot 2021-11-07 at 6 55 13 PM](https://user-images.githubusercontent.com/43297314/140666979-5cfe790d-8265-4c3b-968d-9e0fe0a92f0a.png)
+![Screen Shot 2021-11-07 at 6 51 22 PM](https://user-images.githubusercontent.com/43297314/140666975-abfac6ea-79ff-4bb0-a162-ce35c6d8f2d6.png)
+![Screen Shot 2021-11-07 at 6 51 37 PM](https://user-images.githubusercontent.com/43297314/140666977-fb124f9a-c615-4cc1-934f-81843adc6fcd.png)
 
 ---
 
