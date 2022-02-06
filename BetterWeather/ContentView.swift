@@ -16,22 +16,21 @@ struct ContentView: View {
             SideSettingsView()
                 .environmentObject(locationVM)
             ScrollView(.vertical, showsIndicators: false) {
-                VStack{
+                VStack {
                     MainTitleView(current: forecastVM.forecast.current)
-                    
+
                     SubHeadingView(title: "24 Hour Forecast")
-                    
+
                     HourlyForecastView(hourly: forecastVM.forecast.hourly)
-                    
+
                     BetterDivider()
-                    
+
                     SubHeadingView(title: "This Weeks Forecast")
                     DailyForecastView(daily: forecastVM.forecast.daily)
-                    
-                    
+
                     Spacer()
                 }
-                
+
             }
 //            .background(
 //                Image("clouds")
@@ -39,7 +38,7 @@ struct ContentView: View {
 //                    .scaledToFill()
 //                    .ignoresSafeArea()
 //        )
-            
+
             .background(BackgroundGradient())
         }
     }
@@ -57,7 +56,7 @@ struct ContentView_Previews: PreviewProvider {
 struct SubHeadingView: View {
     let title: String
     var body: some View {
-        HStack{
+        HStack {
             Text(title)
                 .font(.title2.bold())
                 .foregroundStyle(.tertiary)

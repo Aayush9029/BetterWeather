@@ -14,8 +14,8 @@ struct SupportDevView: View {
         Section(
             header: CustomAckLabels(title: "Support Dev", image: "heart.fill", color: .pink)
         ) {
-            
-//            MARK: - To Do
+
+// MARK: - To Do
 //            Button {
 //                openUrl(URL(string: "https://apps.apple.com/us/developer/aayush-pokharel/id1532440924")!)
 //
@@ -23,7 +23,7 @@ struct SupportDevView: View {
 //            } label: {
 //                CustomAckLabels(title: "Rate App", image: "star", color: .yellow)
 //            }
-            
+
 //            Button {
 //                // Sends Discord Thanks via post request.
 //                openUrl(URL(string: "https://apps.apple.com/us/developer/aayush-pokharel/id1532440924")!)
@@ -31,7 +31,7 @@ struct SupportDevView: View {
 //            } label: {
 //                CustomAckLabels(title: "Send thanks", image: "paperplane.fill", color: .blue)
 //            }
-            
+
             Button {
                 openUrl(URL(string: "https://apps.apple.com/us/developer/aayush-pokharel/id1532440924")!)
             } label: {
@@ -48,7 +48,7 @@ struct SupportDevView: View {
 
 struct SupportDevView_Previews: PreviewProvider {
     static var previews: some View {
-        List{
+        List {
             SupportDevView()
         }
     }

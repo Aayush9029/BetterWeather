@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct BackgroundGradient: View {
-    
+
     @State var start = UnitPoint(x: 0, y: -2)
     @State var end = UnitPoint(x: 4, y: 0)
-    let colors = [Color.orange, Color.pink, Color.purple, Color.orange,  Color.red, Color.orange, Color.red]
-    
+    let colors = [Color.orange, Color.pink, Color.purple, Color.orange, Color.red, Color.orange, Color.red]
+
     var body: some View {
         LinearGradient(gradient: Gradient(colors: colors), startPoint: start, endPoint: end)
             .blur(radius: 250)
@@ -27,7 +27,6 @@ struct BackgroundGradient: View {
             })
     }
 }
-
 
 struct BackgroundGradient_Previews: PreviewProvider {
     static var previews: some View {

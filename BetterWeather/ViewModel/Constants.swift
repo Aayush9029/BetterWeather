@@ -7,12 +7,11 @@
 
 import Foundation
 
-
-struct Constants{
+struct Constants {
     static let initialUrl = " https://api.openweathermap.org/data/2.5/onecall?"
 }
 
-enum AppStorageKeys: String{
+enum AppStorageKeys: String {
     case storedCity = "Stored City"
     case storedLat = "Stored Latitude"
     case storedLong = "Stored Longitude"

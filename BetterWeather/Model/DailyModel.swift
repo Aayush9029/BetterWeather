@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - Daily
 struct DailyModel: Codable, Hashable {
-    
+
     let dt, sunrise, sunset, moonrise: Int
     let moonset: Int
     let moonPhase: Double
@@ -23,7 +23,7 @@ struct DailyModel: Codable, Hashable {
     let clouds: Int
     let pop, uvi: Double
     let rain, snow: Double?
-    
+
     enum CodingKeys: String, CodingKey {
         case dt, sunrise, sunset, moonrise, moonset
         case moonPhase  = "moon_phase"
@@ -36,7 +36,7 @@ struct DailyModel: Codable, Hashable {
         case windGust = "wind_gust"
         case weather, clouds, pop, uvi, rain, snow
     }
-    
+
 }
 
 // MARK: - FeelsLike
@@ -49,7 +49,6 @@ struct Temp: Codable, Hashable {
     let day, min, max, night: Double
     let eve, morn: Double
 }
-
 
 let exampleDailyModel =  DailyModel(
     dt: 1634925600,

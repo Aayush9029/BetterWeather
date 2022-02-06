@@ -13,7 +13,7 @@ struct WeatherModel: Codable, Hashable {
     let main: Main
     let weatherDescription: String?
     let icon: Icon?
-    
+
     enum CodingKeys: String, CodingKey {
         case id, main
         case weatherDescription = "description"
@@ -52,7 +52,6 @@ enum Main: String, Codable {
     case thunderstorm = "Thunderstorm"
 }
 
-
 let exampleWeatherModel = WeatherModel(
     id: 0,
     main: .clear ,
@@ -60,8 +59,7 @@ let exampleWeatherModel = WeatherModel(
     icon: .the01d
 )
 
-
-func weatherIconToSf(for icon: Icon) -> String{
+func weatherIconToSf(for icon: Icon) -> String {
     switch icon {
     case .the01d:
         return "sun.min.fill"

@@ -10,11 +10,10 @@ import SwiftUI
 struct ApiKeyAddView: View {
     @Environment(\.openURL) var openURL
     @AppStorage(AppStorageKeys.storedAPIKey.rawValue) var apiKey = ""
-    
-    
+
     var body: some View {
-        VStack{
-            Button("Generate Api Key"){
+        VStack {
+            Button("Generate Api Key") {
                 openURL(URL(string: "https://openweathermap.org/full-price#current")!)
             }
        TextField("Your api key", text: $apiKey)

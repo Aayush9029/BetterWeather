@@ -22,7 +22,6 @@ struct CurrentModel: Codable, Hashable {
     let pop: Double?
     let rain: Rain?
     let snow: Double?
-    
 
     enum CodingKeys: String, CodingKey {
         case dt, sunrise, sunset, temp

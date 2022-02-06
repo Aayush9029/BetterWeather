@@ -22,7 +22,7 @@ struct ForecastModel: Codable {
         case lat, lon, timezone
         case timezoneOffset = "timezone_offset"
         case current, minutely, hourly, daily, alerts
-        
+
     }
 }
 

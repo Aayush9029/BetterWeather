@@ -12,16 +12,16 @@ import CoreLocationUI
 struct SideSettingsView: View {
     @EnvironmentObject var forecaseViewModel: ForecastViewModel
     @EnvironmentObject var locationViewModel: LocationViewModel
-    
+
     @State var isMilk: Bool = false
     var body: some View {
         VStack {
             VStack {
-                List{
+                List {
                     Section(
                         header: CustomAckLabels(title: "Quick Settings", image: "gear", color: .gray)
-                    ){
-                        
+                    ) {
+
                         LocationButton(.currentLocation) {
                             locationViewModel.requestLocation()
                         }.foregroundColor(.white)
@@ -29,15 +29,15 @@ struct SideSettingsView: View {
                             .cornerRadius(10)
                             .shadow(color: .blue.opacity(0.5), radius: 5, x: 0, y: 2)
                             .padding()
-                        
+
                         Button {
                             forecaseViewModel.fetchForecast()
                         } label: {
                             Label("Refresh Weather Data", systemImage: "arrow.clockwise.circle")
                         }
                     }.symbolVariant(.fill)
-                    
-//            MARK: - To Do
+
+// MARK: - To Do
 
 //                    Section(
 //                        header:  CustomAckLabels(title: "Background Style", image: "photo.fill", color: .purple)
@@ -56,8 +56,7 @@ struct SideSettingsView: View {
                     Divider()
                     ApiKeyAddView()
 
-                    
-//            MARK: - To Do
+// MARK: - To Do
 //                    LogView()
                 }
                 Text("Made with ❤️ in 🇨🇦")
@@ -75,4 +74,3 @@ struct SideSettingsView_Previews: PreviewProvider {
             SideSettingsView()
     }
 }
-

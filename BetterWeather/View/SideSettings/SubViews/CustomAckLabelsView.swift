@@ -12,7 +12,7 @@ struct CustomAckLabels: View {
     let image: String
     let color: Color
     var body: some View {
-        HStack{
+        HStack {
             Text(title)
 //            Label(title, systemImage: image)
 //            Image(systemName: image)
@@ -22,7 +22,6 @@ struct CustomAckLabels: View {
         }
     }
 }
-
 
 struct CustomAckLabelsView_Previews: PreviewProvider {
     static var previews: some View {

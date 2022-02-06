@@ -9,8 +9,8 @@ import SwiftUI
 
 struct DailyForecastDetail: View {
     let day: DailyModel
-    
-    var body: some View{
+
+    var body: some View {
         VStack(alignment: .leading) {
             Text(epochToDay(for: day.dt))
                 .font(.title2.bold())
@@ -18,15 +18,15 @@ struct DailyForecastDetail: View {
                 .padding(.leading)
             Divider()
             HStack {
-                HStack{
+                HStack {
                     Spacer()
-                    DailyForecastSubDetail(detail: "\(day.temp.day)°", image:  weatherIconToSf(for: day.weather.first?.icon ?? .the01d))
+                    DailyForecastSubDetail(detail: "\(day.temp.day)°", image: weatherIconToSf(for: day.weather.first?.icon ?? .the01d))
 
                     DailyForecastSubDetail(detail: "\(day.temp.max)°", image: "thermometer.sun")
                     DailyForecastSubDetail(detail: "\(day.temp.min)°", image: "thermometer.snowflake")
-                    
+
                     DailyForecastSubDetail(
-                        detail:"\(day.humidity)%",
+                        detail: "\(day.humidity)%",
                         image: "humidity.fill"
                     )
                     DailyForecastSubDetail(
@@ -34,7 +34,7 @@ struct DailyForecastDetail: View {
                         image: "drop.fill"
                     )
                     DailyForecastSubDetail(detail: String(format: "%.2f km", day.windSpeed), image: "wind", disableDivider: true)
-                    
+
                     Spacer()
                 }
             }
@@ -58,7 +58,7 @@ struct DailyForecastSubDetail: View {
     var body: some View {
         Group {
             HStack {
-                VStack(alignment: .center){
+                VStack(alignment: .center) {
                     Image(systemName: image)
                         .font(.title.bold())
                         .foregroundStyle(.secondary)
@@ -69,7 +69,7 @@ struct DailyForecastSubDetail: View {
                         .foregroundStyle(.tertiary)
                 }
                 .frame(height: 120)
-                if !disableDivider{
+                if !disableDivider {
                     Spacer()
                     Divider()
                     Spacer()

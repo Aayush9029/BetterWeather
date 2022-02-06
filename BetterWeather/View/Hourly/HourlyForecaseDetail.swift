@@ -10,8 +10,8 @@ import SwiftUI
 struct HourlyForecaseDetail: View {
     let hour: CurrentModel
     let shadowColor = Color.white
-    var body: some View{
-        VStack{
+    var body: some View {
+        VStack {
             Text(epochToHour(for: hour.dt))
                 .font(.title2.bold())
                 .font(.subheadline)
@@ -29,7 +29,7 @@ struct HourlyForecaseDetail: View {
             Text(String(format: "%.2f", hour.temp))
                 .font(.title3)
                 .foregroundColor(.primary)
-            
+
             Text(hour.weather.first?.weatherDescription ?? "...")
                 .font(.subheadline)
                 .foregroundColor(.secondary)
@@ -50,7 +50,7 @@ struct HourlyForecaseDetail: View {
         .padding(.vertical, 5)
         .clipped()
         .shadow(color: .black.opacity(0.15), radius: 15, x: 0, y: 10)
-        
+
     }
 }
 struct HourlyForecaseDetail_Previews: PreviewProvider {

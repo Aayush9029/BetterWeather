@@ -7,23 +7,22 @@
 
 import SwiftUI
 
-
 struct MainTitleView: View {
-    @AppStorage(AppStorageKeys.storedCity.rawValue) var storedCity = "";
+    @AppStorage(AppStorageKeys.storedCity.rawValue) var storedCity = ""
     let current: CurrentModel
-    
+
     var body: some View {
-        VStack{
+        VStack {
             Text(storedCity)
                 .font(.title).bold()
                 .foregroundStyle(.tertiary)
                 .shadow(radius: 5)
-            
+
             Text(String(format: "%.0f°", current.temp))
-                .font(.system(size:128).bold())
+                .font(.system(size: 128).bold())
                 .foregroundStyle(.primary)
                 .shadow(color: .black.opacity(0.25), radius: 10)
-            
+
             Text(current.weather.first?.weatherDescription ?? "...")
                 .font(.title).bold()
                 .foregroundStyle(.secondary)
@@ -31,7 +30,6 @@ struct MainTitleView: View {
         }
     }
 }
-
 
 struct MainTitleView_Previews: PreviewProvider {
     static var previews: some View {

@@ -12,9 +12,9 @@ struct LogView: View {
         Section(
             header: Label("Logs", systemImage: "heart.text.square")
         ) {
-            VStack(alignment: .leading){
-                ForEach(0...10, id:\.self) { num in
-                    HStack{
+            VStack(alignment: .leading) {
+                ForEach(0...10, id: \.self) { _ in
+                    HStack {
                         Text("\(Date().get(.minute)):\(Date().get(.second)):\(Date().get(.nanosecond))")
                             .foregroundStyle(.secondary)
                         Text(" Loggs LoggsLoggsLoggsLoggsLoggsLoggsLoggsLoggsLoggs \(Int.random(in: 0...100000))")
@@ -30,7 +30,7 @@ struct LogView: View {
 
 struct LogView_Previews: PreviewProvider {
     static var previews: some View {
-        List{
+        List {
             LogView()
         }
     }

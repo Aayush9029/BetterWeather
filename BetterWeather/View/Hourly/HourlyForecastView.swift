@@ -9,12 +9,12 @@ import SwiftUI
 
 struct HourlyForecastView: View {
     let hourly: [CurrentModel]
-    
+
     var body: some View {
-        
+
         ScrollView(.horizontal, showsIndicators: false) {
-            HStack{
-                ForEach(hourly, id:\ .self){ hour in
+            HStack {
+                ForEach(hourly, id: \ .self) { hour in
                     HourlyForecaseDetail(hour: hour)
                         .padding(10)
                 }

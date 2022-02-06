@@ -16,8 +16,8 @@ struct DailyForecastView: View {
     var body: some View {
         VStack {
             ScrollView(.vertical, showsIndicators: false) {
-                LazyVGrid(columns: columns){
-                    ForEach(daily, id:\.self){ day in
+                LazyVGrid(columns: columns) {
+                    ForEach(daily, id: \.self) { day in
                         DailyForecastDetail(day: day)
                     }
                 }

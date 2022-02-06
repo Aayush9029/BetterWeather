@@ -17,7 +17,7 @@ struct AcknowledgementsView: View {
             Button {
                 openUrl(URL(string: "https://github.com/Aayush9029/BetterWeather")!)
             } label: {
-                HStack{
+                HStack {
                     Image("github-logo")
                         .resizable()
                         .frame(width: 25, height: 25, alignment: .center)
@@ -36,7 +36,7 @@ struct AcknowledgementsView: View {
 
 struct AcknowledgementsView_Previews: PreviewProvider {
     static var previews: some View {
-        List{
+        List {
             AcknowledgementsView()
         }
     }

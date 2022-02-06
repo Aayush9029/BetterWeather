@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 extension Date {
     func get(_ components: Calendar.Component..., calendar: Calendar = Calendar.current) -> DateComponents {
         return calendar.dateComponents(Set(components), from: self)
@@ -18,7 +17,7 @@ extension Date {
     }
 }
 
-func epochToHour(for epoch: Int) -> String{
+func epochToHour(for epoch: Int) -> String {
     let date = Date(timeIntervalSince1970: TimeInterval(epoch))
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "ha"
@@ -26,8 +25,7 @@ func epochToHour(for epoch: Int) -> String{
     return dayInWeek
 }
 
-
-func epochToDay(for epoch: Int) -> String{
+func epochToDay(for epoch: Int) -> String {
     let date = Date(timeIntervalSince1970: TimeInterval(epoch))
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "EEEE, MMM d"
