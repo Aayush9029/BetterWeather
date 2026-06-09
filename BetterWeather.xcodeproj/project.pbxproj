@@ -33,10 +33,37 @@
 		C2D4BA4E272F1D8F00FF6C6A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D4BA4D272F1D8F00FF6C6A /* Constants.swift */; };
 		C2E054E52737268000CD50F4 /* MeshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E054E42737268000CD50F4 /* MeshView.swift */; };
 		C2E054E72737277200CD50F4 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E054E62737277200CD50F4 /* LocationViewModel.swift */; };
+		BEE000000000000000000009 /* BetterWeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2113D0127223AB800EC7705 /* BetterWeatherApp.swift */; };
+		BEE00000000000000000000A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2113D0327223AB800EC7705 /* ContentView.swift */; };
+		BEE00000000000000000000B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2113D0527223AB800EC7705 /* Assets.xcassets */; };
+		BEE00000000000000000000C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2113D0827223AB800EC7705 /* Preview Assets.xcassets */; };
+		BEE00000000000000000000D /* HourlyForecaseDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2113D2E27223B3300EC7705 /* HourlyForecaseDetail.swift */; };
+		BEE00000000000000000000E /* HourlyForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2113D3027223D7B00EC7705 /* HourlyForecastView.swift */; };
+		BEE00000000000000000000F /* MainTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2113D322722434000EC7705 /* MainTitleView.swift */; };
+		BEE000000000000000000010 /* DailyForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2113D34272244A400EC7705 /* DailyForecastView.swift */; };
+		BEE000000000000000000011 /* DailyForecastDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2113D37272248F800EC7705 /* DailyForecastDetail.swift */; };
+		BEE000000000000000000012 /* CustomAckLabelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21AEC99272F299C0009BBEB /* CustomAckLabelsView.swift */; };
+		BEE000000000000000000013 /* AcknowledgementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21AEC9B272F29C60009BBEB /* AcknowledgementsView.swift */; };
+		BEE000000000000000000014 /* SupportDevView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21AEC9D272F2A2A0009BBEB /* SupportDevView.swift */; };
+		BEE000000000000000000015 /* LogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21AECA0272F2F0A0009BBEB /* LogView.swift */; };
+		BEE000000000000000000016 /* BackgroundGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101B427231C3F00D268BF /* BackgroundGradient.swift */; };
+		BEE000000000000000000017 /* SideSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101BF27232C8700D268BF /* SideSettingsView.swift */; };
+		BEE000000000000000000018 /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101C627232F4200D268BF /* ForecastModel.swift */; };
+		BEE000000000000000000019 /* CurrentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101C827232F6600D268BF /* CurrentModel.swift */; };
+		BEE00000000000000000001A /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101CA27232F9000D268BF /* WeatherModel.swift */; };
+		BEE00000000000000000001B /* MinutelyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101CC27232FB600D268BF /* MinutelyModel.swift */; };
+		BEE00000000000000000001C /* DailyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101CE27232FCD00D268BF /* DailyModel.swift */; };
+		BEE00000000000000000001D /* ForecastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101D42723329D00D268BF /* ForecastViewModel.swift */; };
+		BEE00000000000000000001E /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A101D62723460F00D268BF /* Date+Extension.swift */; };
+		BEE00000000000000000001F /* ApiKeyAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D1DA2C27389C1500502DD5 /* ApiKeyAddView.swift */; };
+		BEE000000000000000000020 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D4BA4D272F1D8F00FF6C6A /* Constants.swift */; };
+		BEE000000000000000000021 /* MeshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E054E42737268000CD50F4 /* MeshView.swift */; };
+		BEE000000000000000000022 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E054E62737277200CD50F4 /* LocationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C2113CFE27223AB800EC7705 /* BetterWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEE000000000000000000001 /* BetterWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2113D0127223AB800EC7705 /* BetterWeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterWeatherApp.swift; sourceTree = "<group>"; };
 		C2113D0327223AB800EC7705 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C2113D0527223AB800EC7705 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,6 +101,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BEE000000000000000000003 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -89,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				C2113CFE27223AB800EC7705 /* BetterWeather.app */,
+				BEE000000000000000000001 /* BetterWeather.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -237,6 +272,25 @@
 			productReference = C2113CFE27223AB800EC7705 /* BetterWeather.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BEE000000000000000000005 /* BetterWeather macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEE000000000000000000008 /* Build configuration list for PBXNativeTarget "BetterWeather macOS" */;
+			buildPhases = (
+				BEE000000000000000000002 /* Sources */,
+				BEE000000000000000000003 /* Frameworks */,
+				BEE000000000000000000004 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BetterWeather macOS";
+			packageProductDependencies = (
+			);
+			productName = BetterWeather;
+			productReference = BEE000000000000000000001 /* BetterWeather.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -249,6 +303,9 @@
 				TargetAttributes = {
 					C2113CFD27223AB800EC7705 = {
 						CreatedOnToolsVersion = 13.0;
+					};
+					BEE000000000000000000005 = {
+						CreatedOnToolsVersion = 26.5;
 					};
 				};
 			};
@@ -268,6 +325,7 @@
 			projectRoot = "";
 			targets = (
 				C2113CFD27223AB800EC7705 /* BetterWeather */,
+				BEE000000000000000000005 /* BetterWeather macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -279,6 +337,15 @@
 			files = (
 				C2113D0927223AB800EC7705 /* Preview Assets.xcassets in Resources */,
 				C2113D0627223AB800EC7705 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEE000000000000000000004 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEE00000000000000000000C /* Preview Assets.xcassets in Resources */,
+				BEE00000000000000000000B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +380,37 @@
 				C2D1DA2D27389C1500502DD5 /* ApiKeyAddView.swift in Sources */,
 				C2A101CB27232F9000D268BF /* WeatherModel.swift in Sources */,
 				C2113D0227223AB800EC7705 /* BetterWeatherApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEE000000000000000000002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEE000000000000000000017 /* SideSettingsView.swift in Sources */,
+				BEE000000000000000000020 /* Constants.swift in Sources */,
+				BEE000000000000000000012 /* CustomAckLabelsView.swift in Sources */,
+				BEE00000000000000000000E /* HourlyForecastView.swift in Sources */,
+				BEE000000000000000000016 /* BackgroundGradient.swift in Sources */,
+				BEE000000000000000000011 /* DailyForecastDetail.swift in Sources */,
+				BEE000000000000000000018 /* ForecastModel.swift in Sources */,
+				BEE00000000000000000001D /* ForecastViewModel.swift in Sources */,
+				BEE00000000000000000000F /* MainTitleView.swift in Sources */,
+				BEE000000000000000000019 /* CurrentModel.swift in Sources */,
+				BEE000000000000000000014 /* SupportDevView.swift in Sources */,
+				BEE000000000000000000021 /* MeshView.swift in Sources */,
+				BEE00000000000000000000D /* HourlyForecaseDetail.swift in Sources */,
+				BEE00000000000000000001E /* Date+Extension.swift in Sources */,
+				BEE000000000000000000015 /* LogView.swift in Sources */,
+				BEE000000000000000000010 /* DailyForecastView.swift in Sources */,
+				BEE00000000000000000000A /* ContentView.swift in Sources */,
+				BEE000000000000000000022 /* LocationViewModel.swift in Sources */,
+				BEE00000000000000000001B /* MinutelyModel.swift in Sources */,
+				BEE000000000000000000013 /* AcknowledgementsView.swift in Sources */,
+				BEE00000000000000000001C /* DailyModel.swift in Sources */,
+				BEE00000000000000000001F /* ApiKeyAddView.swift in Sources */,
+				BEE00000000000000000001A /* WeatherModel.swift in Sources */,
+				BEE000000000000000000009 /* BetterWeatherApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +601,68 @@
 			};
 			name = Release;
 		};
+		BEE000000000000000000006 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BetterWeather/BetterWeather.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BetterWeather/Preview Content\"";
+				DEVELOPMENT_TEAM = 4538W4A79B;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "BetterWeather uses your location to fetch local weather.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aayushpokharel.opensource.BetterWeather;
+				PRODUCT_NAME = BetterWeather;
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		BEE000000000000000000007 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BetterWeather/BetterWeather.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BetterWeather/Preview Content\"";
+				DEVELOPMENT_TEAM = 4538W4A79B;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "BetterWeather uses your location to fetch local weather.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aayushpokharel.opensource.BetterWeather;
+				PRODUCT_NAME = BetterWeather;
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -520,6 +680,15 @@
 			buildConfigurations = (
 				C2113D2327223AB900EC7705 /* Debug */,
 				C2113D2427223AB900EC7705 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEE000000000000000000008 /* Build configuration list for PBXNativeTarget "BetterWeather macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEE000000000000000000006 /* Debug */,
+				BEE000000000000000000007 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

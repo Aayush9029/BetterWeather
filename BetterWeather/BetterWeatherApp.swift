@@ -17,7 +17,18 @@ struct BetterWeatherApp: App {
             ContentView()
                 .environmentObject(locationViewModel)
                 .environmentObject(forecaseViewModel)
-                .statusBar(hidden: true)
+                .hideStatusBarWhenAvailable()
         }
+    }
+}
+
+private extension View {
+    @ViewBuilder
+    func hideStatusBarWhenAvailable() -> some View {
+#if os(iOS) || targetEnvironment(macCatalyst)
+        self.statusBar(hidden: true)
+#else
+        self
+#endif
     }
 }

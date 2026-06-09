@@ -49,11 +49,18 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
+#if os(iOS) || targetEnvironment(macCatalyst)
         ContentView()
             .environmentObject(ForecastViewModel())
             .environmentObject(LocationViewModel())
             .preferredColorScheme(.dark)
             .previewInterfaceOrientation(.portraitUpsideDown)
+#else
+        ContentView()
+            .environmentObject(ForecastViewModel())
+            .environmentObject(LocationViewModel())
+            .preferredColorScheme(.dark)
+#endif
     }
 }
 

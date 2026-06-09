@@ -7,7 +7,9 @@
 
 import SwiftUI
 import CoreLocation
+#if canImport(CoreLocationUI)
 import CoreLocationUI
+#endif
 
 struct SideSettingsView: View {
     @EnvironmentObject var forecaseViewModel: ForecastViewModel
@@ -22,7 +24,7 @@ struct SideSettingsView: View {
                         header: CustomAckLabels(title: "Quick Settings", image: "gear", color: .gray)
                     ) {
 
-                        LocationButton(.currentLocation) {
+                        CurrentLocationButton {
                             locationViewModel.requestLocation()
                         }.foregroundColor(.white)
                             .symbolVariant(.fill)
@@ -68,6 +70,21 @@ struct SideSettingsView: View {
             }
         .navigationTitle("Better Weather")
         }
+    }
+}
+
+private struct CurrentLocationButton: View {
+    let action: () -> Void
+
+    var body: some View {
+#if canImport(CoreLocationUI)
+        LocationButton(.currentLocation, action: action)
+#else
+        Button(action: action) {
+            Label("Current Location", systemImage: "location.fill")
+        }
+        .buttonStyle(.borderedProminent)
+#endif
     }
 }
 

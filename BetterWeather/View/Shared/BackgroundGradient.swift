@@ -30,7 +30,11 @@ struct BackgroundGradient: View {
 
 struct BackgroundGradient_Previews: PreviewProvider {
     static var previews: some View {
+#if os(iOS) || targetEnvironment(macCatalyst)
         BackgroundGradient()
             .previewInterfaceOrientation(.landscapeLeft)
+#else
+        BackgroundGradient()
+#endif
     }
 }

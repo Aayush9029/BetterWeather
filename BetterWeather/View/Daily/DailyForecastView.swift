@@ -29,8 +29,13 @@ struct DailyForecastView: View {
 
 struct DailyForecastView_Previews: PreviewProvider {
     static var previews: some View {
+#if os(iOS) || targetEnvironment(macCatalyst)
         DailyForecastView(daily: exampleForecastModel.daily)
             .preferredColorScheme(.dark)
 .previewInterfaceOrientation(.landscapeLeft)
+#else
+        DailyForecastView(daily: exampleForecastModel.daily)
+            .preferredColorScheme(.dark)
+#endif
     }
 }
