@@ -5,15 +5,17 @@
 //  Created by Aayush Pokharel on 2021-10-22.
 //
 
+import os
 import SwiftUI
 
-class ForecastViewModel: ObservableObject {
+@MainActor
+final class ForecastViewModel: ObservableObject {
     @AppStorage(AppStorageKeys.storedLat.rawValue) var storedLat = "0"
     @AppStorage(AppStorageKeys.storedLong.rawValue) var storedLong = "0"
     @AppStorage(AppStorageKeys.storedUnits.rawValue) var storedUnits = "metric"
     @AppStorage(AppStorageKeys.storedAPIKey.rawValue) var apiKey = ""
 
-    @State var currentStatus: CurrentStatus = .none
+    @Published var currentStatus: CurrentStatus = .none
 
     @Published var forecast: ForecastModel = ForecastModel(
         lat: 0,
@@ -44,60 +46,71 @@ class ForecastViewModel: ObservableObject {
         daily: [exampleDailyModel], alerts: [WeatherAlertModel]()
     )
 
-    init() {
-        currentStatus = .fetchingStarted
-        fetchForecast()
-        currentStatus = .fetchingEnded
+    private static let logger = Logger(
+        subsystem: Bundle.main.bundleIdentifier ?? "com.aayush.opensource.BetterWeather",
+        category: "Forecast"
+    )
+
+    private var hasLoadedForecast = false
+
+    func task() async {
+        guard !hasLoadedForecast else { return }
+        hasLoadedForecast = true
+        await fetchForecast()
     }
 
-    func fetchForecast() {
+    func fetchForecast() async {
+        currentStatus = .fetchingStarted
 
-        /*        Might migrate to Async Await in the future using
-         let (data, response) = try await URLSession.shared.data(from: url)
-         */
+        guard let url = ForecastRequest(
+            lat: storedLat,
+            lon: storedLong,
+            apiKey: apiKey,
+            units: storedUnits
+        ).url else {
+            currentStatus = .unknownError
+            return
+        }
 
-        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/onecall?lat=\(storedLat)&lon=\(storedLong)&appid=\(apiKey)&units=\(storedUnits)&units=metric") else {return}
-//        let url = URL(string: "http://192.168.2.23:8000/test.json")!
-
-        print(url)
-        URLSession.shared.dataTask(with: url) { data, response, error in
+        do {
+            let (data, response) = try await URLSession.shared.data(from: url)
 
             guard (response as? HTTPURLResponse)?.statusCode == 200 else {
-                DispatchQueue.main.sync {
-                    self.currentStatus = .fetchingResponseError
-                }
+                currentStatus = .fetchingResponseError
                 return
             }
 
-            if let error = error {
-                self.currentStatus = .fetchingFailed
-                print(error.localizedDescription)
-            }
+            currentStatus = .decodingJson
+            forecast = try JSONDecoder().decode(ForecastModel.self, from: data)
+            currentStatus = .decodingSuccess
+        } catch let error as DecodingError {
+            currentStatus = .decodingFailed
+            Self.logger.error("Forecast decoding failed: \(String(describing: error), privacy: .public)")
+        } catch {
+            currentStatus = .fetchingFailed
+            Self.logger.error("Forecast request failed: \(error.localizedDescription, privacy: .public)")
+        }
+    }
+}
 
-            if let data = data {
-                DispatchQueue.main.sync {
-                    do {
-                        self.currentStatus = .decodingJson
-                        self.forecast = try JSONDecoder().decode(ForecastModel.self, from: data)
-                        self.currentStatus = .decodingSuccess
-                    } catch let DecodingError.dataCorrupted(context) {
-                        print(context)
-                    } catch let DecodingError.keyNotFound(key, context) {
-                        print("Key '\(key)' not found:", context.debugDescription)
-                        print("codingPath:", context.codingPath)
-                    } catch let DecodingError.valueNotFound(value, context) {
-                        print("Value '\(value)' not found:", context.debugDescription)
-                        print("codingPath:", context.codingPath)
-                    } catch let DecodingError.typeMismatch(type, context) {
-                        print("Type '\(type)' mismatch:", context.debugDescription)
-                        print("codingPath:", context.codingPath)
-                    } catch {
-                        self.currentStatus = .decodingFailed
-                        print(error.localizedDescription)
-                    }
-                }
-            }
-        }.resume()
+struct ForecastRequest: Equatable {
+    var lat: String
+    var lon: String
+    var apiKey: String
+    var units: String
+
+    var url: URL? {
+        var components = URLComponents()
+        components.scheme = "https"
+        components.host = "api.openweathermap.org"
+        components.path = "/data/2.5/onecall"
+        components.queryItems = [
+            URLQueryItem(name: "lat", value: lat),
+            URLQueryItem(name: "lon", value: lon),
+            URLQueryItem(name: "appid", value: apiKey),
+            URLQueryItem(name: "units", value: units)
+        ]
+        return components.url
     }
 }
 

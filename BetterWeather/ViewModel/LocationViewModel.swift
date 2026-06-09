@@ -5,18 +5,25 @@
 //  Created by Aayush Pokharel on 2021-08-12.
 //
 
-import SwiftUI
 import CoreLocation
 import MapKit
+import os
+import SwiftUI
 
-class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
+@MainActor
+final class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     @AppStorage(AppStorageKeys.storedLong.rawValue) var lon = ""
     @AppStorage(AppStorageKeys.storedLat.rawValue) var lat = ""
     @AppStorage(AppStorageKeys.storedCity.rawValue) var storedCity = ""
 
     // MARK: - Location Data Model
     let manager = CLLocationManager()
-     var location: CLLocationCoordinate2D?
+    var location: CLLocationCoordinate2D?
+
+    private let logger = Logger(
+        subsystem: Bundle.main.bundleIdentifier ?? "com.aayush.opensource.BetterWeather",
+        category: "Location"
+    )
 
     override init() {
         super.init()
@@ -25,25 +32,29 @@ class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
 
     func requestLocation() {
         manager.requestLocation()
-        printDebugString()
+        logCurrentLocation()
 
         manager.location?.fetchCityAndCountry(completion: { city, _, _ in
-            self.storedCity = city ?? "Unknown City"
+            Task { @MainActor in
+                self.storedCity = city ?? "Unknown City"
+            }
         })
     }
 
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("LOCATION ERROR OCCURED")
-        print(error.localizedDescription)
+    nonisolated func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        Task { @MainActor in
+            self.logger.error("Location request failed: \(error.localizedDescription, privacy: .public)")
+        }
     }
 
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    nonisolated func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
 
         if let location = locations.first?.coordinate {
-            lon = "\(location.longitude)"
-            lat = "\(location.latitude)"
-
-            printDebugString()
+            Task { @MainActor in
+                self.lon = "\(location.longitude)"
+                self.lat = "\(location.latitude)"
+                self.logCurrentLocation()
+            }
 
         } else {
             return
@@ -51,8 +62,8 @@ class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
 
     }
 
-    private func printDebugString() {
-        print("Latitude: \(lat)\nLongitude: \(lon)")
+    private func logCurrentLocation() {
+        logger.debug("Latitude: \(self.lat, privacy: .private), longitude: \(self.lon, privacy: .private)")
     }
 }
 

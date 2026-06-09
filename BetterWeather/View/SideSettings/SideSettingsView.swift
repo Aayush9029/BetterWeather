@@ -31,7 +31,9 @@ struct SideSettingsView: View {
                             .padding()
 
                         Button {
-                            forecaseViewModel.fetchForecast()
+                            Task {
+                                await forecaseViewModel.fetchForecast()
+                            }
                         } label: {
                             Label("Refresh Weather Data", systemImage: "arrow.clockwise.circle")
                         }

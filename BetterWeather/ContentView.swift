@@ -41,6 +41,9 @@ struct ContentView: View {
 
             .background(BackgroundGradient())
         }
+        .task {
+            await forecastVM.task()
+        }
     }
 }
 
@@ -48,6 +51,7 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .environmentObject(ForecastViewModel())
+            .environmentObject(LocationViewModel())
             .preferredColorScheme(.dark)
             .previewInterfaceOrientation(.portraitUpsideDown)
     }
